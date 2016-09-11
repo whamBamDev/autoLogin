@@ -21,8 +21,8 @@ cmd://"{APPDIR}\plugins\autoLogin\login.cmd" "{URL}" "id[h_username]={USERNAME},
 The command is made of 4 arguments, the first 3 are mandatory, the 4th is optional.
 
 1. The first is command that runs the script, always the same.
-2. The the is the url of the login page. Best to use the `{URL}` placeholder which will use the URL entered in the Add/Edit Entry dialog.
-3. Next actions to enter the username and password (again use placeholders) and submit the login form.
+2. The second is the url of the login page. Best to use the `{URL}` placeholder which will use the URL entered in the Add/Edit Entry dialog.
+3. Next argument are actions to enter the username and password (again use placeholders) and submit the login form.
 4. Final optional argument is to action to check if when the page is open then the user is already logged in.
 
 ##Actions
