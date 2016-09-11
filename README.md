@@ -12,9 +12,9 @@ Download files login.cmd and autoLogin.vbs place in directory named autoLogin un
 
 ![Edit Entery Properties](https://github.com/whamBamDev/autoLogin/raw/master/docs/images/KeePass-EditEntry-properties.png)
 
-'''
+```
 cmd://"{APPDIR}\plugins\autoLogin\login.cmd" "{URL}" "id[h_username]={USERNAME},id[h_password]={PASSWORD},id[h_password].focus.tab.enter" "id[logged-in]"
-'''
+```
 
 http://keepass.info/help/base/autourl.html
 
