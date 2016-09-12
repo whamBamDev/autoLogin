@@ -39,8 +39,8 @@ Each action started with the selection of fields, the followed
 ###Element Selection
 
 There are two ways an element/field can be selected;
-1. id[idOfFieldName] - Select by element ID, this will always just select one element.
-2. name[inputFieldName] - Select by input field name, this could select multiple field, the action will be performed on all fields.
+1. `id[idOfFieldName]` - Select by element ID, this will always just select one element.
+2. `name[inputFieldName]` - Select by input field name, this could select multiple field, the action will be performed on all fields.
 
 Once a field is selected then it can be assigned a value, either a fixed value or KeePass placeholder.
 e.g. `id[h_username]={USERNAME}` will populate the username field with the ... err ... username.
@@ -48,15 +48,15 @@ e.g. `id[h_username]={USERNAME}` will populate the username field with the ... e
 ###Element Operations
 
 Next there can can be a series of operations that can be performed. Note that is is best to use use ID selection of a field as this will always return a single field,
-- ".focus" - move the input focus to the current field.
-- ".tab" - tabs to the next field.
-- ".shiftTab" - tabs to the previous field.
-- ".space" - spacebar keypress. Useful for selecting checkboxes.
-- ".enter" - Enter keypress. Can be used to submit a form from a button.
-- ".submit" - Performs a direct form submit.
-- "."wait(x)") - add s delay of x milli seconds.
+- `.focus` - move the input focus to the current field.
+- `.tab` - tabs to the next field.
+- `.shiftTab` - tabs to the previous field.
+- `.space` - spacebar keypress. Useful for selecting checkboxes.
+- `.enter` - Enter keypress. Can be used to submit a form from a button.
+- `.submit` - Performs a direct form submit.
+- `.wait(x)` - add s delay of x milli seconds.
 
-e.g. `id[h_password].focus.tab.enter"` - move to the password field, then tabs onto the next field which is a button and then hits enter.
+e.g. `id[h_password].focus.tab.enter` - move to the password field, then tabs onto the next field which is a button and then hits enter.
 
 ##TODOs
 
