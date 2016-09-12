@@ -39,6 +39,7 @@ Each action started with the selection of fields, the followed
 ###Element Selection
 
 There are two ways an element/field can be selected;
+
 1. `id[idOfFieldName]` - Select by element ID, this will always just select one element.
 2. `name[inputFieldName]` - Select by input field name, this could select multiple field, the action will be performed on all fields.
 
