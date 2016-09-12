@@ -27,26 +27,44 @@ The command is made of 4 arguments, the first 3 are mandatory, the 4th is option
 
 ##Actions
 
-action,action,action 
+For the third and forth arguments then there are a comma separated list of actions.
+Each action will a simple operation such aa population the login form details or submitting the login request.
 
-id[idOfFieldName]
-name[inputFieldName] 
+```
+"action,action,action"
+```
 
-    If keyPress = "enter" Then
-    ElseIf keyPress = "tab" Then
-    ElseIf keyPress = "shiftTab" Then
-    ElseIf keyPress = "space" Then
-            If action = "focus" Then
-                WScript.Sleep 100
-                field.focus
-            ElseIf action = "submit" Then
-            ElseIf InStr( action, "wait(x)") = 1 Then
+Each action started with the selection of fields, the followed 
 
+###Element Selection
+
+There are two ways an element/field can be selected;
+1. id[idOfFieldName] - Select by element ID, this will always just select one element.
+2. name[inputFieldName] - Select by input field name, this could select multiple field, the action will be performed on all fields.
+
+Once a field is selected then it can be assigned a value, either a fixed value or KeePass placeholder.
+e.g. `id[h_username]={USERNAME}` will populate the username field with the ... err ... username.
+
+###Element Operations
+
+Next there can can be a series of operations that can be performed. Note that is is best to use use ID selection of a field as this will always return a single field,
+- ".focus" - move the input focus to the current field.
+- ".tab" - tabs to the next field.
+- ".shiftTab" - tabs to the previous field.
+- ".space" - spacebar keypress. Useful for selecting checkboxes.
+- ".enter" - Enter keypress. Can be used to submit a form from a button.
+- ".submit" - Performs a direct form submit.
+- "."wait(x)") - add s delay of x milli seconds.
+
+e.g. `id[h_password].focus.tab.enter"` - move to the password field, then tabs onto the next field which is a button and then hits enter.
+
+##TODOs
+
+- Element ID and Name selectors - possible use JQuery style
+- checkboxes - add command for force checked or unchecked
 
 ##Useful References
 
 - http://keepass.info/help/base/autourl.html
 - http://keepass.info/help/base/placeholders.html
-
-
 
